@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-auto-rows: auto auto minmax(250px, 1fr);
+  justify-items: center;
+  gap: 2em;
+}
+
+body {
+  min-height: 100vh;
+  text-decoration: none;
+  padding: 0;
+  background-image: linear-gradient(90deg, #ee6352, purple, #ee6352);
+  background-size: 300%;
+  animation: bg-animation 25s infinite;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+
+nav a {
+  padding: 0.8em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  border-bottom: 2px solid black;
+  font-size: 1.4em;
+}
+
+.headline {
+  text-align: center;
+  border-bottom: 2px solid black;
+  padding: 0;
+}
+
+#portfolioMenu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 5rem;
+  align-content: start;
+}
+
+@media (max-width: 41.375em) {
+  #portfolioMenu {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 24.375em) {
+  #portfolioMenu {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+  }
+  .headline {
+    padding: 2em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+}
+
+#portfolioMenu p {
+  font-family: "Roboto Slab", serif;
+}
+
+.theme {
+  font-size: 1.9rem;
+}
+
+.themeNr {
+  font-size: 1.2rem;
+}
+
+.text {
+  font-size: 1.2rem;
+}
+
+#basicWeb,
+#basicUX,
+#basicAnim,
+#basicContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  gap: 2em;
+  border-top: 2px solid black;
+  align-self: flex-end;
+}
+#footerLeft {
+  text-align: right;
+  padding-top: 2em;
+}
+#footerRight {
+  text-align: left;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Bebas Neue", cursive;
+  color: beige;
+}
+
+a:hover {
+  color: rgb(178, 202, 245);
+}
+
+h1 {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 3rem;
+  margin-top: 0;
+}
+
+h1,
+h2,
+p {
+  color: wheat;
+  font-family: "Roboto Slab", serif;
+}
